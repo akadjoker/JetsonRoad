@@ -1,0 +1,7 @@
+docker build -t jetson-tools .
+docker run --rm -it -v $(pwd):/app jetson-tools
+
+docker run -it --name minha_sessao -v $(pwd):/app jetson-tools
+# Depois podes voltar com:
+docker start -ai minha_sessao
+

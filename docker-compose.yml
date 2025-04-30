@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  jetson:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jetson-sim
+    volumes:
+      - ./scripts:/app/scripts
+    working_dir: /app
+    stdin_open: true
+    tty: true
+
