@@ -33,7 +33,7 @@ dst = np.float32([
 
 matrix = cv2.getPerspectiveTransform(pts, dst)
 
-# Abrir vídeo
+
 cap = cv2.VideoCapture(VIDEO_FILE)
 if not cap.isOpened():
     raise IOError("Não foi possível abrir o vídeo.")

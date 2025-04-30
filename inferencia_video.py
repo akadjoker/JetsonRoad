@@ -69,7 +69,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 
-# --- Abre o vídeo ---
+
 cap = cv2.VideoCapture(VIDEO_PATH)
 
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))

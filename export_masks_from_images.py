@@ -7,7 +7,7 @@ import os
 # === CONFIGURAÇÕES ===
 INPUT_DIR = "images"
 OUTPUT_DIR = "masks"
-USE_CANNY = False  # Mudar para True se quiser usar Canny
+USE_CANNY = False  
 HSV_RANGE = {
     'hmin': 0,
     'hmax': 180,

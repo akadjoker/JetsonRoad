@@ -5,7 +5,7 @@ import numpy as np
 def nothing(x):
     pass
 
-cap = cv2.VideoCapture('video_20250410_072000.avi')  # Substitui pelo nome correto se necessário
+cap = cv2.VideoCapture('video_20250410_072000.avi') 
 cv2.namedWindow('Trackbars')
 
 # Criar sliders HSV
@@ -27,7 +27,7 @@ while True:
 
     hsv = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
 
-    # Ler valores dos sliders
+
     h_min = cv2.getTrackbarPos('H_min', 'Trackbars')
     h_max = cv2.getTrackbarPos('H_max', 'Trackbars')
     s_min = cv2.getTrackbarPos('S_min', 'Trackbars')
