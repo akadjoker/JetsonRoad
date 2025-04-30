@@ -1,0 +1,13 @@
+{
+    "roi_top": 0,
+    "roi_bottom": 480,
+    "hmin": 0,
+    "hmax": 179,
+    "smin": 0,
+    "smax": 255,
+    "vmin": 200,
+    "vmax": 255,
+    "canny_low": 50,
+    "canny_high": 150,
+    "kernel": 3
+}

@@ -22,7 +22,6 @@ W, H = 640, 480
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Carregar pontos do warp
 with open("warp_points.json", "r") as f:
     pts_json = json.load(f)
 
