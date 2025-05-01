@@ -30,7 +30,7 @@ def gstreamer_pipeline(
 class AutonomousCar:
     def __init__(self):
         self.engine_path = "unet_model.engine"
-        self.img_size = (256, 256)
+        self.img_size = (64, 64)
         self.threshold = 0.5
         self.ghost_timeout = 2.0
         self.min_distance = 40
