@@ -189,7 +189,12 @@ class AutonomousCar:
         return steering_angle
 
     def executar(self):
+        frame_count = 0
+        skip_frames = 2  # Processa só 1 em cada 3 frames
         while self.cap.isOpened():
+            frame_count += 1
+            if frame_count % (skip_frames + 1) != 0:
+                continue  # Skip este frame
             ret, frame = self.cap.read()
             if not ret:
                 print("Can't receive frame. Exiting ...")
