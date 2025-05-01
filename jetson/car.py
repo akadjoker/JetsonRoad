@@ -9,23 +9,22 @@ from collections import deque
 
 
 def gstreamer_pipeline(
-        capture_width=400,
-        capture_height=400,
-        display_width=640,
-        display_height=480,
+        capture_width=320,
+        capture_height=240,
+        display_width=320,
+        display_height=240,
+
         framerate=30,
         flip_method=0,
 ):
     return (
-        "nvarguscamerasrc ! "
-        "video/x-raw(memory:NVMM), "
-        f"width=(int){capture_width}, height=(int){capture_height}, "
+        f"nvarguscamerasrc ! "
+        f"video/x-raw(memory:NVMM), width=(int){capture_width}, height=(int){capture_height}, "
         f"format=(string)NV12, framerate=(fraction){framerate}/1 ! "
-        "nvvidconv flip-method=%d ! "
-        "video/x-raw, width=(int)%d, height=(int)%d, format=(string)BGRx ! "
-        "videoconvert ! "
-        "video/x-raw, format=(string)BGR ! appsink"
-        % (flip_method, display_width, display_height)
+        f"nvvidconv flip-method={flip_method} ! "
+        f"video/x-raw(memory:NVMM), width=(int){display_width}, height=(int){display_height}, format=(string)BGRx ! "
+        f"videoconvert ! "
+        f"video/x-raw, format=(string)BGR ! appsink drop=1 max-buffers=1 sync=false"
     )
 
 class AutonomousCar:
