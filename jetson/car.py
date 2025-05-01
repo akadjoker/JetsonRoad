@@ -58,8 +58,11 @@ class AutonomousCar:
         self.input_binding_idx = self.engine.get_binding_index("input")
         self.output_binding_idx = self.engine.get_binding_index("output")
 
-        self.input_mem = cuda.mem_alloc(np.prod(self.input_shape) * np.float32().nbytes)
-        self.output_mem = cuda.mem_alloc(np.prod((1, 1, *self.img_size)) * np.float32().nbytes)
+        #self.input_mem = cuda.mem_alloc(np.prod(self.input_shape) * np.float32().nbytes)
+        #self.output_mem = cuda.mem_alloc(np.prod((1, 1, *self.img_size)) * np.float32().nbytes)
+        self.input_mem = cuda.mem_alloc(int(np.prod(self.input_shape)) * np.float32().nbytes)
+        self.output_mem = cuda.mem_alloc(int(np.prod((1, 1, *self.img_size))) * np.float32().nbytes)
+
 
         self.bindings = [int(self.input_mem), int(self.output_mem)]
 
