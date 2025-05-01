@@ -34,7 +34,7 @@ class AutonomousCar:
         self.threshold = 0.5
         self.ghost_timeout = 2.0
         self.min_distance = 40
-        self.show_mask = True  # Podes mudar para False
+        self.show_mask = False  # Podes mudar para False
  
 
         self.point_history = deque(maxlen=5)
