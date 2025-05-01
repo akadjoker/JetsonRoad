@@ -1,0 +1,14 @@
+{
+    "VIDEO_PATH": "video_20250410_072000.avi",
+    "MODEL_PATH": "unet_trained.pth",
+    "IMG_SIZE": [256, 256],
+    "THRESHOLD": 0.5,
+    "GHOST_TIMEOUT": 2.0,
+    "MIN_DISTANCE": 40,
+    "MIN_AREA_PIXELS": 50,
+    "HISTORY_SIZE": 5,
+    "MAX_STEERING_ANGLE": 30.0,
+    "SHOW_MASK": true,
+    "RECORD_OUTPUT": true
+}
+
